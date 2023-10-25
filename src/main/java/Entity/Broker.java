@@ -4,6 +4,9 @@ public class Broker {
     private long id;
     private String name;
 
+    public Broker() {
+    }
+
     public long getId() {
         return id;
     }
@@ -18,5 +21,13 @@ public class Broker {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Broker{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
