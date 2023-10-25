@@ -1,7 +1,12 @@
 package org.example;
 
+import Entity.Broker;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Broker broker = new Broker();
+        broker.setId(132);
+        broker.setName("James Corn");
     }
 }
