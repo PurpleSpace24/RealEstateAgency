@@ -2,17 +2,12 @@ package Entity;
 
 public class Broker {
     private long id;
+    private static int nextId = 1;
+
     private String name;
 
     public Broker() {
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+        this.id = nextId++;
     }
 
     public String getName() {
