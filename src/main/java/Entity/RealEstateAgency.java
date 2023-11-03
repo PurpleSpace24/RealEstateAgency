@@ -2,6 +2,9 @@ package Entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
+import static java.lang.System.*;
 
 public class RealEstateAgency {
     private String name;
@@ -32,9 +35,15 @@ public class RealEstateAgency {
     }
 
     public void displayAllBrokers(){
-        for (Broker broker : brokerList){
-            System.out.println(broker);
+       for (Broker broker : brokerList){
+            out.println(broker);
         }
+    }
+
+    public void displayBrokerWithLowerRegNumber(){
+        Optional<Broker> minBroker = brokerList.stream().min((Broker.brokerRegNumber));
+
+        minBroker.ifPresent(broker -> System.out.println("Broker with the minimum registration number: " + broker));
     }
 
     @Override
