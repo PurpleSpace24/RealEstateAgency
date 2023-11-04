@@ -4,18 +4,20 @@ import java.util.Comparator;
 import java.util.Random;
 
 public class Broker {
+    Random random = new Random();
     private long regNumber;
     private static int nextId = 101;
 
     private String name;
 
     public Broker() {
-        Random random = new Random();
         nextId = random.nextInt(1001);
         this.regNumber = nextId;
     }
 
     public Broker(String name) {
+        nextId = random.nextInt(1001);
+        this.regNumber = nextId;
         this.name = name;
     }
 
