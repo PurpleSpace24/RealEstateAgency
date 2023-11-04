@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static java.lang.System.*;
+import static java.lang.System.out;
 
 public class RealEstateAgency {
     private String name;
@@ -35,7 +35,7 @@ public class RealEstateAgency {
     }
 
     public void displayAllBrokers(){
-       for (Broker broker : brokerList){
+        for (Broker broker : brokerList){
             out.println(broker);
         }
     }
